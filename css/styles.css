@@ -125,8 +125,8 @@ body.open .main-header .menu-close {
     background-image: linear-gradient(
         to bottom,
         var(--secondary-color) 0%,
-        var(--secondary-color) 25%,
-        #f9f6ef 25%,
+        var(--secondary-color) 35%,
+        #f9f6ef 35%,
         #f9f6ef 100%
     );
 }
