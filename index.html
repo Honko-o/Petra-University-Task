@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/media-queries.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="main-header text-light py-3">
+            <div class="container-md container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-8 col-md-4 justify-content-md-center">
+                        <div
+                            class="university-logo justify-content-sm-start justify-content-md-start d-flex gap-4 align-items-center"
+                        >
+                            <img class="img-fluid" src="./svg/logo.svg" alt="website logo" />
+                            <div class="university-logo-content">
+                                <h1 class="text-uppercase fw-bold">
+                                    جامعة البتــــرا
+                                </h1>
+                                <p class="text-uppercase lead fw-bold">
+                                    جسر نحو المعرفة
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-8">
+                        <div class="university-info d-flex flex-column">
+                            <div
+                                class="top-bar d-flex justify-content-end justify-content-md-end gap-5 py-4"
+                            >
+                                <ul
+                                    class="user-role-list d-flex gap-4 list-unstyled justify-content-end align-items-center d-none d-md-flex"
+                                >
+                                    <li class="fs-3">
+                                       <a href="#">زائـر</a></li>
+                                    <li class="fs-3">
+                                       <a href="#">موظف</a></li>
+                                    <li class="fs-3">
+                                       <a href="#">طالب</a></li>
+                                    <li class="fs-3">
+                                       <a href="#">خريج</a></li>
+                                </ul>
+                                <ul
+                                    class="university-info-options d-flex gap-4 align-items-center list-unstyled"
+                                >
+                                    <li
+                                        class="language-change d-flex align-items-center justify-content-center rounded-circle order-2"
+                                    >
+                                        <button class="bg-transparent border-0 text-white">
+                                            <span id="language-text"> ع </span>
+                                        </button>
+                                    </li>
+                                    <li class="order-3 menu-open">
+                                        <button id="open-button" class="navbar-toggler bg-transparent border-0 text-white">
+                                            <i class="bi bi-eye-fill d-none d-md-block"></i>
+                                            <i class="bi bi-list menu-icon d-block d-md-none"></i>
+                                        </button>
+                                    </li>
+                                    <li class="order-3 menu-close">
+                                        <button id="close-button" class="navbar-toggler bg-transparent border-0 text-white">
+                                            <i class="bi bi-x-lg"></i>
+                                        </button>
+                                    </li>
+                                    <li class="search-icon">
+                                        <button id="search-icon-button" class="bg-transparent border-0 text-white">
+                                            <i class="bi bi-search"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <nav class="bottom-bar py-4 d-none d-md-block">
+                                <ul
+                                    class="list-unstyled d-flex gap-4 align-items-center justify-content-end d-none d-md-flex"
+                                >
+                                    <li class="flex-shrink-0">
+                                        <a href="#" class="fs-3">عن الجامعة</a>
+                                    </li>
+                                    <li class="flex-shrink-0 d-none d-lg-block">
+                                        <a href="#" class="fs-3">البحث العلمي</a>
+                                    </li>
+                                    <li class="flex-shrink-0">
+                                        <a href="#" class="fs-3">أكاديمي</a>
+                                    </li>
+                                    <li class="flex-shrink-0">
+                                        <a href="#" class="fs-3">القبول والتسجيل</a>
+                                    </li>
+                                    <li class="flex-shrink-0">
+                                        <a href="#" class="fs-3"
+                                            >خدمة مجتمع</a
+                                        >
+                                    </li>
+                                    <li class="flex-shrink-0">
+                                        <a href="#" class="fs-3">أدلة</a>
+                                    </li>
+                                    <li class="flex-shrink-0 d-none d-lg-block">
+                                        <a href="#" class="fs-3"
+                                            >مراكز و وحدات</a
+                                        >
+                                    </li>
+                                    <li class="flex-shrink-0 d-none d-lg-block">
+                                        <a href="#" class="fs-3"
+                                            >التصفح السريع>></a
+                                        >
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="page-info bg-light">
+            <div class="container">
+                <form class="row py-5 align-items-center">
+                    <div class="col-md-5 col-lg-3">
+                        <div class="input-group search-input-wrapper">
+                            <input
+                                class="form-control rounded-pill py-2 pr-5 fs-3 mr-1 order-last text-start"
+                                type="search"
+                                placeholder="ابحث في الفعاليات..."
+                                id="search"
+                                type="text"
+                            />
+                            <span
+                                class="input-group-prepend bg-transparent high-zindex search-icon"
+                            >
+                                <div
+                                    class="input-group-text bg-transparent border-0 ml-n5"
+                                >
+                                    <i
+                                        class="bi bi-search"
+                                        style="font-size: 3rem"
+                                    ></i>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="offset-lg-2 col-md-7 col-lg-7 d-flex align-items-center mt-5 mt-lg-0">
+                        <nav
+                            style="--bs-breadcrumb-divider: '>'"
+                            aria-label="breadcrumb"
+                        >
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a class="fs-3" href="#">الرئيسية</a>
+                                </li>
+                                <li
+                                    class="breadcrumb-item fs-3"
+                                    aria-current="page"
+                                >
+                                    <a class="fs-3" href="#">فعاليات الجامعة</a>
+                                </li>
+                                <li
+                                    class="breadcrumb-item active fs-3 text-black fw-bold"
+                                    aria-current="page"
+                                >
+                                إيقاف جميع الخدمات الإلكترونية
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <main class="main-content py-5">
+            <div class="container">
+                <article class="row">
+                    <div class="col-lg-5">
+                        <div class="card shadow overflow-hidden">
+                            <img
+                                class="card-img-top"
+                                src="./img/card-img.png"
+                                alt="Card image cap"
+                            />
+                            <div class="card-body p-5 mb-md-">
+                                <h2 class="event-content-heading text-black d-lg-none">
+                                    معرض المشاريع المشاركة بالدورة السابعة لمسابقة مشاريع التخرج المعمارية لجائزة العمرانية ومركز دراسات البيئة المبنية CSBE
+                                </h2>
+                                <ul class="event-details-list list-unstyled">
+                                    <li
+                                        class="event-detail-item d-flex align-items-center gap-5"
+                                    >
+                                        <img
+                                            src="./svg/calender-icon.svg"
+                                            alt="date of event"
+                                        />
+                                        <span id="date">25/1/2022 الثلائاء</span>
+                                    </li>
+                                    <li
+                                        class="event-detail-item d-flex align-items-center gap-5"
+                                    >
+                                        <i
+                                            class="bi bi-clock-fill"
+                                            aria-label="starting time of event"
+                                        ></i>
+                                        <span id="clock-time">2:00 مساءً</span>
+                                    </li>
+                                    <li
+                                        class="event-detail-item d-flex align-items-center gap-5"
+                                    >
+                                        <i
+                                            class="bi bi-geo-alt-fill"
+                                            aria-label="location of event"
+                                        ></i>
+                                        <span id="location">المسرح الرئيسي</span>
+                                    </li>
+                                    <li
+                                        class="event-detail-item d-flex align-items-center gap-5"
+                                    >
+                                        <img
+                                            src="./svg/people-icon.svg"
+                                            alt="group of people allowed"
+                                        />
+                                        <span>مفتوحة لكل طلبة الجامعة</span>
+                                    </li>
+                                    <li
+                                        class="event-detail-item d-flex align-items-center gap-5"
+                                    >
+                                        <img
+                                            src="./svg/calender-add-icon.svg"
+                                            alt="add event to calendar"
+                                        />
+                                        <span
+                                            ><a href="#"
+                                                >أضف إلى رزنامتك</a
+                                            ></span
+                                        >
+                                    </li>
+                                    <li
+                                        class="event-detail-item d-flex align-items-center gap-5"
+                                    >
+                                        <i class="bi bi-link-45deg"></i>
+                                        <span
+                                            ><a href="#">سجل الآن</a></span
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <!-- H2 -->
+                        <div
+                        class="event-footer1 d-block d-md-none d-flex align-items-center justify-content-between"
+                    >
+                        <div class="author d-flex flex-column">
+                            <p class="author-post-time m-0">تاريخ النشر 12/29/2021</p>
+                            <p class="author-name m-0">كلية العمارة والتصميم</p>
+                    </div>
+                        <div
+                            class="share-post-button d-flex justify-content-end align-items-center gap-4"
+                        >
+                            <ul
+                                class="share-post-list list-unstyled d-flex gap-2"
+                            >
+                                <li class="share-post-list-item">
+                                    <button
+                                        class="btn rounded-circle"
+                                    >
+                                        <i class="bi bi-envelope"></i>
+                                    </button>
+                                </li>
+                                <li class="share-post-list-item">
+                                    <button
+                                        class="btn rounded-circle"
+                                    >
+                                        <i class="bi bi-twitter"></i>
+                                    </button>
+                                </li>
+                                <li class="share-post-list-item">
+                                    <button
+                                        class="btn rounded-circle"
+                                    >
+                                        <i class="bi bi-facebook"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <span>شارك</span>
+                        </div>
+                        
+                    </div>
+                    </div>
+
+
+                    
+
+                    <div class="event-content offset-lg-1 col-lg-6">
+                        <h2 class="event-content-heading text-white d-none d-lg-block">
+                            برعاية الأستاذ الدكتور رئيس الجامعة استضافت كلية العمارة والتصميم "معرض المشاريع المشاركة بالدورة السابعة لمسابقة مشاريع التخرج المعمارية لجائزة العمرانية ومركز دراسات البيئة المبنية CSBE وذلك يوم الاثنين 15/12/2014، في تمام الساعة العاشرة صباحاً في صالة معارض (باب حارتنا) في الجامعة.                         </h2>
+                        <p class="text-black lh-lg mb-5 fs-2">
+                            حيث يستمر المعرض لمدة أسبوعين، لما له أهمية لزيادة اطلاع طلبة هندسة العمارة في الجامعات المختلفة على جميع الاتجاهات المطروحة في المدارس المعمارية في الوطن العربي، حيث شارك في المسابقة في دورتها السابعة 90 مشروعاً من 28 جامعة عربية، وقد فاز مشروعي من مشاريع تخرج جامعة البترا للسنة الدراسية 2013/2014، من أصل 6 مشاريع بالمرتبة الأولى.                         </p>
+                        <p class="text-black lh-lg fs-2 mb-5 pb-5">
+                            وقد تم عرض المشروعين بشكل تفصيلي وتكريم الفائزين وهما : خالد عريم خالد علي عن مشروعه النكبة / متحف القضية الفلسطينية بإشراف المهندسة رانيا أبو رمضان ، ويزيد أبو غربية عن مشروعه مركز الثقافة الشركسية بإشراف الدكتورة هدير مرزة. وقد حضر حفل الافتتاح جمهور كبير من المهندسين الممارسين وطلبة هندسة العمارة من جامعات مختلفة.                        </p>
+                        <div class="event-footer2 d-none d-md-flex d-flex align-items-center justify-content-between">
+                            <div class="author d-flex flex-column">
+                                <p class="author-post-time m-0">تاريخ النشر 12/29/2021</p>
+                                <p class="author-name m-0">كلية العمارة والتصميم</p>
+                            </div>
+                            <div class="share-post-button d-flex justify-content-end align-items-center gap-4">
+                                <ul class="share-post-list list-unstyled d-flex gap-2">
+                                    <li class="share-post-list-item">
+                                        <button class="btn rounded-circle">
+                                            <i class="bi bi-envelope"></i>
+                                        </button>
+                                    </li>
+                                    <li class="share-post-list-item">
+                                        <button class="btn rounded-circle">
+                                            <i class="bi bi-twitter"></i>
+                                        </button>
+                                    </li>
+                                    <li class="share-post-list-item">
+                                        <button class="btn rounded-circle">
+                                            <i class="bi bi-facebook"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <span>شارك</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <footer class="footer text-white">
+            <div class="footer-info py-5">
+                <div class="container">
+                    <div class="sponsors">
+                        <ul class="row gy-5 list-unstyled align-items-center justify-content-lg-around">
+                        
+                            <li class="col-2 col-md-4 col-lg-auto">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                <img
+                                    class="img-fluid"
+                                    src="./svg/company-1.svg"
+                                    alt="company 1 logo"
+                                />
+                                </div>
+                                
+                            </li>
+                            <li class="col-2 col-md-4 col-lg-auto">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                <img
+                                    class="img-fluid"
+                                    src="./svg/company-2.svg"
+                                    alt="company 2 logo"
+                                />
+                                </div>
+                                
+                            </li>
+                            <li class="col-2 col-md-4 col-lg-auto">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                <img
+                                    class="img-fluid"
+                                    src="./svg/company-3.svg"
+                                    alt="company 3 logo"
+                                />
+                                </div>
+                                
+                            </li>
+                            <li class="col-2 col-md-4 col-lg-auto">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                <img
+                                    class="img-fluid"
+                                    src="./svg/company-4.svg"
+                                    alt="company 4 logo"
+                                />
+                                </div>
+                                
+                            </li>
+                            <li class="col-2 col-md-4 col-lg-auto">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                    <img
+                                        class="img-fluid"
+                                        src="./svg/company-5.svg"
+                                        alt="company 5 logo"
+                                    />
+                                </div>
+                                
+                            </li>
+                            <li class="col-2 col-md-4 col-lg-auto">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                    <img
+                                        class="img-fluid"
+                                        src="./svg/company-6.svg"
+                                        alt="company 6 logo"
+                                    />
+                                </div>
+                            </li>
+                            <li class="col-2 col-md-4 col-lg-auto">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                    <img
+                                        class="img-fluid"
+                                        src="./svg/company-7.svg"
+                                        alt="company 7 logo"
+                                    />
+                                </div>
+                            </li>
+                            <li class="col-2 col-md-4 col-lg-auto">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                    <img
+                                        class="img-fluid"
+                                        src="./svg/company-8.svg"
+                                        alt="company 8 logo"
+                                    />
+                                </div>
+                            </li>
+                            <li class="col-2 col-md-4 col-lg-auto">
+                                <div class="img-wrapper d-flex align-items-center justify-content-center">
+                                    <img
+                                        class="img-fluid"
+                                        src="./svg/company-9.svg"
+                                        alt="company 9 logo"
+                                    />
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="footer-contact-us-wrapper">
+                                <div class="footer-contact-us">
+                                    <h3>تواصل معنا</h3>
+                                    <address class="lh-lg">
+                                        <span>القبول والتسجيل: <br />
+                                        رقم هاتف : +962 65799555 <br />
+                                        فاكس: +96265715570<br />
+                                        info@uop.edu.jo :البريد الإلكتروني <br />
+                                        <span
+                                            class="d-flex gap-4 align-items-center contact-more"
+                                            ><i class="bi bi-play-fill"></i>
+                                            <a href="#">المزيد للتواصل</a></span
+                                        >
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-3">
+                            <div class="footer-useful-links">
+                                <ul class="row list-unstyled d-flex justify-content-between flex-md-column gap-0 gap-md-4 gap-lg-3 gy-5 gy-md-0">
+                                    <li class="col-3 align-items-center align-items-md-stretch col-md-auto d-flex d-md-block justify-content-center justify-content-md-start rounded-pill">
+                                        <a
+                                            class="d-block d-md-flex w-100 text-center text-md-start align-items-md-center gap-3 ms-0 ms-md-0"
+                                            href="#"
+                                        >
+                                            <i class="bi bi-play-fill d-none d-md-block"></i
+                                            ><span>خدمات</span>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 align-items-center align-items-md-stretch col-md-auto d-flex d-md-block justify-content-center justify-content-md-start rounded-pill">
+                                        <a
+                                            class="d-block d-md-flex w-100 text-center text-md-start align-items-md-center gap-3 ms-0 ms-md-0"
+                                            href="#"
+                                        >
+                                            <i class="bi bi-play-fill d-none d-md-block"></i
+                                            ><span>الحياة الجامعية</span>
+                                        </a>
+                                    </li>
+                                    <li class="col-4 align-items-center align-items-md-stretch col-md-auto d-flex d-md-block justify-content-center justify-content-md-start rounded-pill">
+                                        <a
+                                            class="d-block d-md-flex w-100 text-center text-md-start align-items-md-center gap-3 ms-0 ms-md-0"
+                                            href="#"
+                                        >
+                                            <i class="bi bi-play-fill d-none d-md-block"></i
+                                            ><span>التقويم الجامعي</span>
+                                        </a>
+                                    </li>
+                                    <li class="offset-4 align-items-center align-items-md-stretch offset-md-0 col-3 col-md-auto d-flex d-md-block justify-content-center justify-content-md-start rounded-pill">
+                                        <a
+                                            class="d-block d-md-flex w-100 text-center text-md-start align-items-md-center gap-3 ms-0 ms-md-0"
+                                            href="#"
+                                        >
+                                            <i class="bi bi-play-fill d-none d-md-block"></i
+                                            ><span>موارد بشرية</span>
+                                        </a>
+                                    </li>
+                                    <li class="col-4 align-items-center align-items-md-stretch col-md-auto d-flex d-md-block justify-content-center justify-content-md-start rounded-pill">
+                                        <a
+                                            class="d-block d-md-flex w-100 text-center text-md-start align-items-md-center gap-3 ms-0 ms-md-0"
+                                            href="#"
+                                        >
+                                            <i class="bi bi-play-fill d-none d-md-block"></i
+                                            ><span>منبر البترا</span></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="offset-lg-1 col-lg-5">
+                            <div class="footer-location d-flex justify-content-between justify-content-md-around gap-3">
+                                <ul class="list-unstyled location-list flex-shrink-0">
+                                    <li>جامعة البترا</li>
+                                    <li>عمان</li>
+                                    <li>طريق المطار</li>
+                                    <li>الأردن</li>
+                                    <li>صندوق بريد 961343</li>
+                                </ul>
+                                <img src="./svg/map.svg" alt="Petra University Location in map">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links pt-5">
+                <div class="container">
+                    <div class="row align-items-center gap-3 gap-lg-0">
+                        <div class="col-lg-4 d-flex justify-content-between d-lg-block justify-content-lg-start align-items-center">
+                            <ul class="list-unstyled d-flex gap-3 justify-content-md-center">
+                                <li>
+                                    <button class="btn rounded-circle">
+                                        <i class="bi bi-instagram"></i>
+            
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle">
+                                        <i class="bi bi-youtube"></i>
+            
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle">
+                                        <i class="bi bi-facebook"></i>
+            
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle">
+                                        <i class="bi bi-twitter"></i>
+            
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle">
+                                        <i class="bi bi-linkedin"></i>
+            
+                                    </button>
+                                </li>
+                            </ul>
+                            <img class="img-fluid d-lg-none" src="./img/digital-secure.png" alt="digital secure logo">
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled d-flex gap-3 flex-wrap justify-content-center">
+                                <li>اتفاقيات حقوق الإنسان</li>
+                                <li>RESN</li>
+                                <li>وزارة التعليم العالي</li>
+                                <li>بوابة السفارات</li>
+                                <li>الموسوعة الفلسطينية</li>
+                                <li>إدراك</li>
+                                <li>المكتبة الإلكترونية</li>
+                                <li>ACM</li>
+                                <li>Scopus</li>
+                                <li>Other Universities</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-1 d-none d-lg-block mx-auto">
+                            <img class="img-fluid" src="./img/digital-secure.png" alt="digital secure logo">
+                        </div>
+                    </div>
+                    <p class="text-center m-0 py-5">
+                        &copy; 2021 جامعة البترا - جميع الحقوق محفوظة
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- fast-search-open -->
+        <nav class="mobile-menu gap-2 search position-fixed start-0 w-100 text-white d-md-none">
+            <div class="mobile-menu-wrapper">
+                <div id="menu" class="container mb-4">
+                    <div class="about">
+                        <button class="dropdown-button p-3 w-100 justify-content-between text-white d-flex mb-2 bg-transparent border-0 align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about" aria-expanded="false">
+                            <span>About</span>
+                            <span class="custom-carret"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                              </svg></span>
+                          </button>
+                          <div class="dropdown-links collapse" id="about" data-bs-parent="#menu">
+                            <ul class="list-unstyled fw-normal pb-1 small d-flex flex-column gap-3">
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Vision</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">BoT</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Options</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Chief Advisor</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">CEO</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Vice President</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Departments</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">University Club</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="management">
+                        <button class="dropdown-button p-3 w-100 justify-content-between text-white d-flex mb-2 bg-transparent border-0 align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#management" aria-expanded="false">
+                            <span>Management</span>
+                            <span class="custom-carret"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                              </svg></span>
+                          </button>
+                          <div class="dropdown-links collapse" id="management" data-bs-parent="#menu">
+                            <ul class="list-unstyled fw-normal pb-1 small d-flex flex-column gap-3">
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="students">
+                        <button class="dropdown-button p-3 w-100 justify-content-between text-white d-flex mb-2 bg-transparent border-0 align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#students" aria-expanded="false">
+                            <span>Students</span>
+                            <span class="custom-carret"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                              </svg></span>
+                          </button>
+                          <div class="dropdown-links collapse" id="students" data-bs-parent="#menu">
+                            <ul class="list-unstyled fw-normal pb-1 small d-flex flex-column gap-3">
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="academics">
+                        <button class="dropdown-button p-3 w-100 justify-content-between text-white d-flex mb-2 bg-transparent border-0 align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#academics" aria-expanded="false">
+                            <span>Academics</span>
+                            <span class="custom-carret"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                              </svg></span>
+                          </button>
+                          <div class="dropdown-links collapse" id="academics" data-bs-parent="#menu">
+                            <ul class="list-unstyled fw-normal pb-1 small d-flex flex-column gap-3">
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="registration">
+                        <button class="dropdown-button p-3 w-100 justify-content-between text-white d-flex mb-2 bg-transparent border-0 align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#registration" aria-expanded="false">
+                            <span>Registration</span>
+                            <span class="custom-carret"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                              </svg></span>
+                          </button>
+                          <div class="dropdown-links collapse" id="registration" data-bs-parent="#menu">
+                            <ul class="list-unstyled fw-normal pb-1 small d-flex flex-column gap-3">
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="research">
+                        <button class="dropdown-button p-3 w-100 justify-content-between text-white d-flex mb-2 bg-transparent border-0 align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#research" aria-expanded="false">
+                            <span>Registration</span>
+                            <span class="custom-carret"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                              </svg></span>
+                          </button>
+                          <div class="dropdown-links collapse" id="research" data-bs-parent="#menu">
+                            <ul class="list-unstyled fw-normal pb-1 small d-flex flex-column gap-3">
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="community-service">
+                        <button class="dropdown-button p-3 w-100 justify-content-between text-white d-flex mb-2 bg-transparent border-0 align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#community-service" aria-expanded="false">
+                            <span>Community Service</span>
+                            <span class="custom-carret"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                              </svg></span>
+                          </button>
+                          <div class="dropdown-links collapse" id="community-service" data-bs-parent="#menu">
+                            <ul class="list-unstyled fw-normal pb-1 small d-flex flex-column gap-3">
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="hr">
+                        <button class="dropdown-button p-3 w-100 justify-content-between text-white d-flex mb-2 bg-transparent border-0 align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#hr" aria-expanded="false">
+                            <span>Human Resources</span>
+                            <span class="custom-carret"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                              </svg></span>
+                          </button>
+                          <div class="dropdown-links collapse" id="hr" data-bs-parent="#menu">
+                            <ul class="list-unstyled fw-normal pb-1 small d-flex flex-column gap-3">
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <a href="#" id="fast-search" class="gap-2 p-3 w-100 text-white d-flex mb-2 bg-transparent border-0 align-items-center">Fast Search >></a>
+                    <div class="media fast-search-links">
+                        <button class="dropdown-button p-3 w-100 justify-content-between text-white d-flex mb-2 bg-transparent border-0 align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#media" aria-expanded="false">
+                            <span>Media</span>
+                            <span class="custom-carret"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                              </svg></span>
+                          </button>
+                          <div class="dropdown-links collapse" id="media" data-bs-parent="#menu">
+                            <ul class="list-unstyled fw-normal pb-1 small d-flex flex-column gap-3">
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="library fast-search-links">
+                        <div class="media">
+                            <button class="dropdown-button p-3 w-100 justify-content-between text-white d-flex mb-2 bg-transparent border-0 align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#library" aria-expanded="false">
+                                <span>Library</span>
+                                <span class="custom-carret"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                    <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                  </svg></span>
+                              </button>
+                              <div class="dropdown-links collapse" id="library" data-bs-parent="#menu">
+                                <ul class="list-unstyled fw-normal pb-1 small d-flex flex-column gap-3">
+                                    <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                    <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                    <li><a href="#" class="d-block w-100 align-items-center rounded">Link</a></li>
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <ul class="user-role-list d-flex gap-4 pt-4 list-unstyled justify-content-center align-items-center d-flex border-top">
+                        <li class="fs-3">
+                           <a href="#">Visitor</a></li>
+                        <li class="fs-3">
+                           <a href="#">Student</a></li>
+                        <li class="fs-3">
+                           <a href="#">Staff</a></li>
+                        <li class="fs-3">
+                           <a href="#">Alumni</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container search-options text-center">
+            <h2 class="text-light mb-5 w-75 mx-auto">Search in Website of University</h2>
+            <div class="input-group search-input-wrapper">
+                 <span class="input-group-prepend position-absolute bg-transparent search-icon">
+                     <div class="input-group-text bg-transparent border-0 ml-n5">
+                         <i class="bi bi-search text-white" style="font-size: 3rem"></i>
+                     </div>
+                 </span>
+                 <input class="form-control rounded-pill w-100 py-3 pr-2 fs-3 mr-1 order-last text-start" type="search" id="search">
+             </div>
+             <div class="search-buttons d-flex align-items-center flex-column gap-4 mt-5">
+                 <a id="search-submit" href="https://www.google.com" target="_blank" class="btn text-white w-50 d-block rounded-pill fs-1">Search in Web</a>
+                 <button id="exit" class="btn btn-outline-secondary w-50 d-block rounded-pill fs-1">Exit</bu>
+             </div>
+         </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./app.js"></script>
+    </body>
+</html>

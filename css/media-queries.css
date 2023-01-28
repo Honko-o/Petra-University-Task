@@ -1,0 +1,92 @@
+@media (max-width: 75em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 65em) {
+    html {
+        font-size: 48%;
+    }
+}
+
+@media (max-width: 63.75em) {
+    .input-group {
+        margin-left: 3rem;
+    }
+    .mobile-menu .input-group,
+    .search-options .input-group {
+        margin-left: 0;
+    }
+    .main-content .card {
+        margin-bottom: 10rem;
+    }
+}
+
+@media (max-width: 62em) {
+    .input-group {
+        width: 100%;
+    }
+
+    .mobile-menu .input-group,
+    .search-options .input-group {
+        width: 90%;
+    }
+    .main-header::before {
+        display: none;
+    }
+    .university-logo img {
+        width: 15%;
+    }
+    .main-content .card {
+        margin-bottom: 5rem;
+    }
+    .footer-location img {
+        max-width: 100%;
+    }
+    .footer-links img {
+        width: 18%;
+    }
+    .event-footer1 {
+        margin-bottom: 10rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .input-group {
+        width: 100%;
+    }
+    .university-logo img {
+        width: 9%;
+    }
+}
+
+@media (min-width: 48em) {
+    body.open .main-header {
+        background-color: var(--main-color);
+    }
+}
+
+@media (max-width: 36em) {
+    html {
+        font-size: 45%;
+    }
+    .footer-location img {
+        max-width: 50%;
+    }
+    .university-logo-content h1 {
+        font-size: 1.8rem !important;
+    }
+    .university-logo img {
+        width: 12%;
+    }
+    .page-info {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 31.25em) {
+    .footer-useful-links .col-3 {
+        width: 30%;
+    }
+}
