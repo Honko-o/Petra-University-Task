@@ -35,6 +35,7 @@ searchSubmitLink.addEventListener('click', function (event) {
 exitOptionsButton.addEventListener('click', () => {
     closeMenu();
     hideSearchOptions();
+    mobileMenu.classList.remove('fast-search-open');
 });
 
 searchIconButton.addEventListener('click', function () {
